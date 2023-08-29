@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}
+            HW-sem-1
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <div>
+                <ul class="header">
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('clothes') }}">Одежда</a></li>
+                    <li><a href="{{ url_for('shoes') }}">Обувь</a></li>
+                    <li><a href="{{ url_for('jackets') }}">Куртки</a></li>
+                </ul>
+            </div>
+            {% block content %}
+                none
+            {% endblock %}
+        </div>
+        <hr>
+        <footer>
+            <p>All rights reserved (c)</p>
+        </footer>
+    </div>
+</body>
+</html>
