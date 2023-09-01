@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+
+    <title>HW-2</title>
+</head>
+<body>
+    {% block content %}
+        {% if session.username %}
+            <h1>Welcome to home page</h1>
+            <h2>Привет, {{ session.username }}!</h2>
+            <button><a href="/logout">Log out</a></button>
+        {% else %}
+            <h1>Welcome to home page</h1>    
+            <button><a href="/log">Login</a></button>
+        {% endif %}
+        
+    {% endblock %}
+</body>
+</html>
